@@ -3,9 +3,7 @@ data "aws_ami" "centos" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
     }
-output "ami" {
-value = data.aws_ami.centos.image_id
-}
+
 resource "aws_instance" "frontend" {
   ami           = "data.aws_ami.centos.image_id"
   instance_type = "t3.micro"
@@ -15,9 +13,7 @@ resource "aws_instance" "frontend" {
   }
 }
 
-output "frontend" {
- value = aws_instance.frontend.public_ip
- }
+
 
 resource "aws_instance" "mongodb" {
   ami           = "data.aws_ami.centos.image_id"
