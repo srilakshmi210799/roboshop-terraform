@@ -7,7 +7,7 @@ output "ami" {
 value = data.aws_ami.centos.image_id
 }
 resource "aws_instance" "frontend" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = "ami-0b5a2b5b8f2be4ec2"
   instance_type = "t3.micro"
 
   tags = {
@@ -29,7 +29,7 @@ resource "aws_instance" "mongodb" {
   }
 
   resource "aws_instance" "catalogue" {
-    ami           = "data.aws_ami.centos.image_id"
+    ami           = "ami-0b5a2b5b8f2be4ec2"
     instance_type = "t3.micro"
 
     tags = {
@@ -47,7 +47,7 @@ resource "aws_instance" "mongodb" {
       }
 
       resource "aws_instance" "user" {
-        ami           = "data.aws_ami.centos.image_id"
+        ami           = "ami-0b5a2b5b8f2be4ec2"
         instance_type = "t3.micro"
 
         tags = {
@@ -56,7 +56,7 @@ resource "aws_instance" "mongodb" {
         }
 
         resource "aws_instance" "cart" {
-          ami           = "data.aws_ami.centos.image_id"
+          ami           = "ami-0b5a2b5b8f2be4ec2"
           instance_type = "t3.micro"
 
           tags = {
@@ -65,7 +65,7 @@ resource "aws_instance" "mongodb" {
           }
 
           resource "aws_instance" "rabbitmq" {
-            ami           = "data.aws_ami.centos.image_id"
+            ami           = "ami-0b5a2b5b8f2be4ec2"
             instance_type = "t3.micro"
 
             tags = {
@@ -74,7 +74,7 @@ resource "aws_instance" "mongodb" {
             }
 
             resource "aws_instance" "shipping" {
-              ami           = "data.aws_ami.centos.image_id"
+              ami           = "ami-0b5a2b5b8f2be4ec2"
               instance_type = "t3.micro"
 
               tags = {
@@ -93,7 +93,7 @@ resource "aws_instance" "mongodb" {
 
 
  resource "aws_instance" "mysql" {
-                ami           = "data.aws_ami.centos.image_id"
+                ami           = "ami-0b5a2b5b8f2be4ec2"
                 instance_type = "t3.micro"
 
                 tags = {
