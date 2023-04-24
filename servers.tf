@@ -83,7 +83,7 @@ resource "aws_instance" "mongodb" {
               }
 
               resource "aws_instance" "payment" {
-                ami           = "data.aws_ami.centos.image_id"
+                ami           = "ami-0b5a2b5b8f2be4ec2"
                 instance_type = "t3.micro"
 
                 tags = {
