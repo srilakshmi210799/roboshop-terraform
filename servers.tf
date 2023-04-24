@@ -1,3 +1,12 @@
+data "aws_ami" "centos" {
+  executable_users = ["self"]
+  most_recent      = true
+  name_regex       = "centos-8-devops-practice"
+  owners           = ["973714476881"]
+}
+output "ami" {
+value = data.aws_ami.centos_id
+}
 resource "aws_instance" "frontend" {
   ami           = "ami-0b5a2b5b8f2be4ec2"
   instance_type = "t3.micro"
