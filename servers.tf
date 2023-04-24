@@ -7,8 +7,8 @@ output "ami" {
 value = data.aws_ami.centos.id
 }
 resource "aws_instance" "frontend" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
-  instance_type = "t3.micro"
+  ami           = "data.aws_ami.centos.image_id"
+  instance_type = "t3.micro"data
 
   tags = {
     Name = "frontend"
@@ -29,7 +29,7 @@ resource "aws_instance" "mongodb" {
   }
 
   resource "aws_instance" "catalogue" {
-    ami           = "ami-0b5a2b5b8f2be4ec2"
+    ami           = "data.aws_ami.centos.image_id"
     instance_type = "t3.micro"
 
     tags = {
@@ -47,7 +47,7 @@ resource "aws_instance" "mongodb" {
       }
 
       resource "aws_instance" "user" {
-        ami           = "ami-0b5a2b5b8f2be4ec2"
+        ami           = "data.aws_ami.centos.image_id"
         instance_type = "t3.micro"
 
         tags = {
@@ -56,7 +56,7 @@ resource "aws_instance" "mongodb" {
         }
 
         resource "aws_instance" "cart" {
-          ami           = "ami-0b5a2b5b8f2be4ec2"
+          ami           = "data.aws_ami.centos.image_id"
           instance_type = "t3.micro"
 
           tags = {
@@ -65,7 +65,7 @@ resource "aws_instance" "mongodb" {
           }
 
           resource "aws_instance" "rabbitmq" {
-            ami           = "ami-0b5a2b5b8f2be4ec2"
+            ami           = "data.aws_ami.centos.image_id"
             instance_type = "t3.micro"
 
             tags = {
@@ -74,7 +74,7 @@ resource "aws_instance" "mongodb" {
             }
 
             resource "aws_instance" "shipping" {
-              ami           = "ami-0b5a2b5b8f2be4ec2"
+              ami           = "data.aws_ami.centos.image_id"
               instance_type = "t3.micro"
 
               tags = {
@@ -83,7 +83,7 @@ resource "aws_instance" "mongodb" {
               }
 
               resource "aws_instance" "payment" {
-                ami           = "ami-0b5a2b5b8f2be4ec2"
+                ami           = "data.aws_ami.centos.image_id"
                 instance_type = "t3.micro"
 
                 tags = {
@@ -93,7 +93,7 @@ resource "aws_instance" "mongodb" {
 
 
  resource "aws_instance" "mysql" {
-                ami           = "ami-0b5a2b5b8f2be4ec2"
+                ami           = "data.aws_ami.centos.image_id"
                 instance_type = "t3.micro"
 
                 tags = {
