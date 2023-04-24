@@ -14,7 +14,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = Z004884537OA190BBQ37H
+  zone_id = "Z004884537OA190BBQ37H"
   name    = "frontend-dev.srdevops.online"
   type    = "A"
   ttl     = 30
@@ -33,7 +33,7 @@ resource "aws_instance" "mongodb" {
   }
 
   resource "aws_route53_record" "mongodb" {
-    zone_id = Z004884537OA190BBQ37H
+    zone_id = "Z004884537OA190BBQ37H"
     name    = "mongodb-dev.srdevops.online"
     type    = "A"
     ttl     = 30
@@ -50,7 +50,7 @@ resource "aws_instance" "mongodb" {
     }
 
     resource "aws_route53_record" "catalogue" {
-      zone_id = Z004884537OA190BBQ37H
+      zone_id = "Z004884537OA190BBQ37H"
       name    = "catalogue-dev.srdevops.online"
       type    = "A"
       ttl     = 30
@@ -67,7 +67,7 @@ resource "aws_instance" "mongodb" {
       }
 
       resource "aws_route53_record" "redis" {
-        zone_id = Z004884537OA190BBQ37H
+        zone_id = "Z004884537OA190BBQ37H"
         name    = "redis-dev.srdevops.online"
         type    = "A"
         ttl     = 30
@@ -84,7 +84,7 @@ resource "aws_instance" "mongodb" {
         }
 
         resource "aws_route53_record" "user" {
-          zone_id = Z004884537OA190BBQ37H
+          zone_id = "Z004884537OA190BBQ37H"
           name    = "user-dev.srdevops.online"
           type    = "A"
           ttl     = 30
@@ -101,7 +101,7 @@ resource "aws_instance" "mongodb" {
           }
 
           resource "aws_route53_record" "cart" {
-            zone_id = Z004884537OA190BBQ37H
+            zone_id = "Z004884537OA190BBQ37H"
             name    = "cart-dev.srdevops.online"
             type    = "A"
             ttl     = 30
@@ -118,7 +118,7 @@ resource "aws_instance" "mongodb" {
             }
 
             resource "aws_route53_record" "rabbitmq" {
-              zone_id = Z004884537OA190BBQ37H
+              zone_id = "Z004884537OA190BBQ37H"
               name    = "rabbitmq-dev.srdevops.online"
               type    = "A"
               ttl     = 30
@@ -135,7 +135,7 @@ resource "aws_instance" "mongodb" {
               }
 
               resource "aws_route53_record" "shipping" {
-                zone_id = Z004884537OA190BBQ37H
+                zone_id = "Z004884537OA190BBQ37H"
                 name    = "shipping-dev.srdevops.online"
                 type    = "A"
                 ttl     = 30
@@ -152,7 +152,7 @@ resource "aws_instance" "mongodb" {
                 }
 
                 resource "aws_route53_record" "payment" {
-                  zone_id = Z004884537OA190BBQ37H
+                  zone_id = "Z004884537OA190BBQ37H"
                   name    = "payment-dev.srdevops.online"
                   type    = "A"
                   ttl     = 30
@@ -170,7 +170,7 @@ resource "aws_instance" "mongodb" {
                 }
 
                 resource "aws_route53_record" "mysql" {
-                  zone_id = Z004884537OA190BBQ37H
+                  zone_id = "Z004884537OA190BBQ37H"
                   name    = "mysql-dev.srdevops.online"
                   type    = "A"
                   ttl     = 30
