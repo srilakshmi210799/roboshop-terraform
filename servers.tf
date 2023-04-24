@@ -54,7 +54,7 @@ resource "aws_instance" "mongodb" {
       name    = "catalogue-dev.srdevops.online"
       type    = "A"
       ttl     = 30
-      records = [aws_instance.ctalogue.private_ip]
+      records = [aws_instance.catalogue.private_ip]
     }
 
     resource "aws_instance" "redis" {
